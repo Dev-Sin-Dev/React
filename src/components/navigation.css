@@ -1,0 +1,63 @@
+.navbar {
+  min-height: 7vh;
+  background-color: #3b0e0e;
+  box-shadow: 0px -6px 22px 6px #000000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+select {
+  cursor: pointer;
+  padding: 0.5em 4em 0.5em 1.5em;
+  border-radius: 2%;
+  border: none;
+  background-color: #2b2e2e;
+  color: #b3b3b3;
+}
+
+select:active,
+select:focus {
+  outline: 0;
+}
+
+.class-select {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  background-color: #444646;
+  height: 100%;
+  width: 3em;
+  pointer-events: none;
+}
+
+.arrow::before,
+.arrow::after {
+  --size: 0.45em;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow::before {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid #b3b3b3;
+  top: 64%;
+}
+
+.arrow::after {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-bottom: var(--size) solid #b3b3b3;
+  top: 33%;
+}
